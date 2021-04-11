@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>博客详情</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+<link rel="stylesheet" href="./static/css/me.css">
+</head>
+<body>
+
+	<!-- 导航 -->
+	<nav class="ui inverted attached segment m-padding-tb-mini">
+		<div class="ui container">
+			<div class="ui inverted secondary stackable menu">
+				<h2 class="ui teal header item">Blog</h2>
+				<a href="#" class="m-item item m-mobile-hide"><i class="home icon"></i>首页</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="idea icon"></i>分类</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="tags icon"></i>标签</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="clone icon"></i>归档</a>
+				<a href="#" class="m-item item m-mobile-hide"><i class="info icon"></i>关于我</a>
+				<!-- 搜索框 -->
+				<div class="right m-item item m-mobile-hide">
+					<div class="ui icon inverted transparent input">
+						<input type="text" placeholder="Search...">
+						<i class="search link icon"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+			<i class="sidebar icon"></i>
+		</a>
+	</nav>
+
+	<!-- 中间内容 -->
+	<div class="m-container-small m-padding-tb-large">
+		<div class="ui container">
+			<!-- 头部区域 -->
+			<div class="ui top attached segment">
+				<div class="ui horizontal link list">
+					<div class="item">
+						<img src="https://unsplash.it/100/100?image=1005" alt="" class="ui avatar image">
+						<div class="content"><a href="#" class="header">厘米人</a></div>
+					</div>
+					<div class="item">
+						<i class="calendar icon"></i>2021-11-11
+					</div>
+					<div class="item">
+						<i class="eye icon"></i>2341
+					</div>
+				</div>
+			</div>
+			<!-- 图片区域 -->
+			<div class="ui attached segment">
+				<img src="https://unsplash.it/800/450?image=1005" alt="" class="image ui rounded fluid">
+			</div>
+			<!-- 内容区域 -->
+			<div class="ui attached padded segment">
+				<div class="ui right aligned basic segment">
+					<div class="ui orange basic label">原创</div>
+				</div>
+				<h2 class="ui header center aligned">关于可以练习的清单</h2>
+				<div id="content" class="m-padding-lr-responsive m-padding-tb-large">
+					关注芯片投融资越久，越感到情势火热。上次写完《互联网投法》之后更是发现，现在的芯片企业就两类，一类是拿了钱找官宣时机的；一类是拿了钱不吭气的。
+
+最近的两个案例，一个是壁仞科技宣布完成B轮融资，成立一年多时间，迅速累计融资超47亿人民币，创下该领域融资速度及融资规模纪录，成为成长势头最为迅猛的“独角兽”企业；一边是国产存储器龙头合肥长鑫被曝正在进行百亿级融资，百度宣布其旗下昆仑芯片业务已完成了独立融资协议的签署，投后估值约130亿人民币。
+
+天眼查的数据显示，自2021年起，在短短不到3个月的时间，甚至包括春节假期，芯片行业融资事件就有共148起，而这其中，拿到两轮以上融资的有12家公司，占总体融资企业的8.82%。正可谓你方唱罢我登场，有位投资人冲我吐槽，“这个产业啥都缺，就是不缺钱和投资人。”
+
+速迭代的融资速度
+
+以融资大户地平线为例，其2020年12月宣布启动超7亿美元的C轮融资，同时宣称已完成C1轮1.5亿美金融资；两周后的1月7日，其又宣布完成4亿美元C2轮融资；紧接着1个月后的2月9日，其又宣布完成C3轮3.5亿美元融资。
+
+一路收获超过预定目标的融资额不说，还有多位多位汽车行业投资人遗憾地表示，太抢手了，没抢到地平线的股权。这还是在投前估值上涨到35亿美元的前提之下。
+
+有投资人向我描述现在属于芯片企业的融资节奏是，这轮刚结束，下一轮马上谈好，下下轮也很快就要占坑结束了。
+
+芯耀辉科技就是个例子，其直接在2月24日宣布了天使和Pre-A轮融资，总融资金额超4亿元人民币。且后一轮由红杉中国、高瓴创投、云晖资本和高榕资本联合投资，松禾资本、五源资本（原晨兴资本）、国策投资和大横琴集团等机构参投。而该公司成立的时间为2020年6月。
+
+时隔一天，2月25日，刚成立100天的摩尔线程宣布已完成由深创投、红杉中国、GGV联合领投的共计数十亿元的两轮融资。
+
+2020年12月，中国EDA软件公司芯华章在Pre A+轮和A轮中获得了3060万美元（约合2亿人民币）的投资。芯华章成立于2020年3月，这两轮融资由云晖资本、高瓴创投领投。
+
+单单2021年2月一个月，就有超过33家半导体企业，融到了超过53亿人民币的融资金额，这还是在有着整整7天春节假期的情况之下，可谓真正的时间与金钱的赛跑。
+
+“整个国内确实有些过热，有些半导体项目可能在天使轮和A轮就到了二三十亿元的估值，泡沫肯定是存在的。只是这个泡沫对于行业是好或是坏，可能也要一分为二。” 联想创投合伙人宋春雨说。
+
+光是细数纸面上的案例就足以让人感到压迫感了，那么形成这份急迫感的背后有哪些市场因素？这些市场驱动力的存在是正常的吗？
+				</div>
+				
+				<!-- 标签 -->
+				<div class="m-padding-lr-responsive">
+					<div class="ui basic teal left pointing label">方法论</div>
+				</div>
+				
+				<!-- 赞赏 -->
+				<div class="ui center aligned basic segment">
+					<button id="payButton" class="ui orange basic circular button">赞赏</button>
+				</div>
+				<div class="ui payQR flowing popup transition hidden">
+					<div class="ui orange basic label">
+						<div class="ui images" style="font-size: inherit !important">
+							<div class="image">
+								<img alt="" src="./static/images/wechat.jpg" class="ui rounded bordered image" style="width: 120px;">
+								<div>支付宝支付</div>
+							</div>
+							<div class="image">
+								<img alt="" src="./static/images/wechat.jpg" class="ui rounded bordered image" style="width: 120px;">
+								<div>微信支付</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 博客信息 -->
+			<div class="ui attached positive message">
+				<div class="ui middle aligned grid">
+					<div class="eleven wide column">
+						<ul class="list">
+							<li>作者：厘米人（联系作者）</li>
+							<li>发表时间：2021-11-11 11：11</li>
+							<li>版权声明：自由转载-非商用-非衍生-保持署名（创意共享3.0许可证）</li>
+							<li>公众号转载：请在文末添加作者公众号二维码</li>
+						</ul>
+					</div>
+					<div class="five wide column">
+						<img alt="" src="./static/images/wechat.jpg" class="ui right floated rounded bordered image" style="width: 110px;">
+					</div>
+				</div>
+			</div>
+			<!-- 留言区域 -->
+			<div class="ui bottom attached segment">
+				<div class="ui teal segment">
+					<div class="ui comments">
+						<h3 class="ui dividing header">Comments</h3>
+						<div class="comment">
+							<a class="avatar"> <img src="https://unsplash.it/100/100?image=1005">
+							</a>
+							<div class="content">
+								<a class="author">Matt</a>
+								<div class="metadata">
+									<span class="date">Today at 5:42PM</span>
+								</div>
+								<div class="text">How artistic!</div>
+								<div class="actions">
+									<a class="reply">回复</a>
+								</div>
+							</div>
+						</div>
+						<div class="comment">
+							<a class="avatar"> <img src="https://unsplash.it/100/100?image=1005">
+							</a>
+							<div class="content">
+								<a class="author">Elliot Fu</a>
+								<div class="metadata">
+									<span class="date">Yesterday at 12:30AM</span>
+								</div>
+								<div class="text">
+									<p>This has been very useful for my research. Thanks as
+										well!</p>
+								</div>
+								<div class="actions">
+									<a class="reply">回复</a>
+								</div>
+							</div>
+							<div class="comments">
+								<div class="comment">
+									<a class="avatar"> <img
+										src="https://unsplash.it/100/100?image=1005">
+									</a>
+									<div class="content">
+										<a class="author">Jenny Hess</a>
+										<div class="metadata">
+											<span class="date">Just now</span>
+										</div>
+										<div class="text">Elliot you are always so right :)</div>
+										<div class="actions">
+											<a class="reply">回复</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="comment">
+							<a class="avatar"> <img src="https://unsplash.it/100/100?image=1005">
+							</a>
+							<div class="content">
+								<a class="author">Joe Henderson</a>
+								<div class="metadata">
+									<span class="date">5 days ago</span>
+								</div>
+								<div class="text">Dude, this is awesome. Thanks so much</div>
+								<div class="actions">
+									<a class="reply">回复</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="ui form">
+					<div class="field">
+						<textarea name="content" placeholder="请输入评论信息..."></textarea>
+					</div>
+					<div class="fields">
+						<div class="field m-mobile-wide m-margin-bottom-small">
+							<div class="ui left icon input">
+								<i class="user icon"></i>
+								<input type="text" name="nickname" placeholder="姓名">
+							</div>
+						</div>
+						<div class="field m-mobile-wide m-margin-bottom-small">
+							<div class="ui left icon input">
+								<i class="mail icon"></i>
+								<input type="text" name="email" placeholder="邮箱">
+							</div>
+						</div>
+						<div class="field m-mobile-wide m-margin-bottom-small">
+							<button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 底部footer -->
+	<footer class="ui inverted vertical segment m-padding-tb-massive">
+		<div class="ui center aligned container">
+			<div class="ui inverted divided stackable grid">
+				<div class="three wide column">
+					<div class="ui inverted link list">
+						<div class="item">
+							<img src="./static/images/wechat.jpg" class="ui rounded image" alt="" style="width: 110px;">
+						</div>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">用户故事(User Story)</a>
+						<a href="#" class="item">用户故事(User Story)</a>
+						<a href="#" class="item">用户故事(User Story)</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header m-text-thin m-text-spaced">联系我</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Email: lirenmi@163.com</a>
+						<a href="#" class="item">QQ: 865729312</a>
+					</div>
+				</div>
+				<div class="seven wide column">
+					<h4 class="ui inverted header m-text-thin m-text-spaced">Blog</h4>
+					<div class="ui inverted link list">
+						<p class="m-text-thin m-text-spaced m-opacity-mini">jsDelivr is a free CDN for open source files. We are tightly integrated with Github and npm allowing us to automatically provide a reliable CDN service to almost every open source project out there.</p>
+					</div>
+				</div>
+			</div>
+			<div class="ui inverted section divider"></div>
+			<p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2016 - 2017 Lirenmi Designed by Lirenmi</p>
+		</div>
+	</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+	$('.menu.toggle').click(function() {
+		$('.m-item').toggleClass('m-mobile-hide');
+	});
+	$('#payButton').popup({
+		popup: $('.payQR.popup'),
+		on: 'click',
+		position: 'bottom center'
+	});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
