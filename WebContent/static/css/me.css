@@ -11,6 +11,10 @@ body {
 	padding: 0.3em !important;
 }
 
+.m-padding {
+	padding: 1em !important;
+}
+
 .m-padding-tb-mini {
 	padding-top: 0.1em !important;
 	padding-bottom: 0.1em !important;
@@ -135,6 +139,17 @@ body {
 .m-shadow-small {
 	-webkit-box-shadow: 0 0px 8px rgba(0,0,0,0.2) !important;
 	box-shadow: 0 0px 8px rgba(0,0,0,0.2) !important;
+}
+
+/*------ position ------*/
+.m-fixed {
+	position: fixed !important;
+	z-index: 10 !important;
+}
+
+.m-right-bottom {
+	bottom: 0 !important;
+	right: 0 !important;
 }
 
 /*------ color ------*/
